@@ -5,7 +5,7 @@ function App() {
   const [timerText, setTimerText] = useState('')
 
   useEffect(() => {
-    const startDate = new Date.now()
+    const startDate = new Date('2025-11-22T00:00:00')
     const endDate = new Date('2025-12-31T23:59:59')
 
     function updateTimer() {
@@ -38,7 +38,7 @@ function App() {
         <div className="nero-name">NERO<br />LIU</div>
       </div>
       <div className="under-construction">CURRENTLY UNDER CONSTRUCTION</div>
-      {/* <div id="timer" className="timer">{timerText}</div> */}
+      <div id="timer" className="timer">{timerText}</div>
     </div>
   )
 }
