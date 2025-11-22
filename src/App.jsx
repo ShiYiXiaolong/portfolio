@@ -35,7 +35,11 @@ function App() {
   return (
     <div className="container">
       <div className="nero-box">
-        <div className="nero-name">NERO<br />LIU</div>
+        <div className="nero-name" style={{ color: '#6C2EB7', fontSize: '12rem', fontFamily: "'IBM Plex Mono', monospace" }}>
+          NERO
+          <br />
+          LIU
+        </div>
       </div>
       <div className="under-construction">CURRENTLY UNDER CONSTRUCTION</div>
       <div id="timer" className="timer">{timerText}</div>
