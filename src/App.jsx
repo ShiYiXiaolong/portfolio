@@ -42,7 +42,7 @@ function App() {
         </div>
       </div>
       <div className="under-construction">CURRENTLY UNDER CONSTRUCTION</div>
-      <div id="timer" className="timer">{timerText}</div>
+      {/* <div id="timer" className="timer">{timerText}</div> */}
     </div>
   )
 }
