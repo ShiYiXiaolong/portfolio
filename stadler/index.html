@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="de" class="theme-dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holz-Technik Stadler - Seit 1898</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="blob-bg"></div>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/logo-stadler-29309f65.png" alt="Holz-Technik Stadler" class="nav-logo">
+                <span class="logo-text">Holz-Technik<br><b class="logo-bold">Stadler</b></span>
+            </div>
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#services">Leistungen</a>
+                    <a href="#chronik">Chronik</a>
+                    <a href="#gallery">Projekte</a>
+                    <a href="#pathfinder">Wegweiser</a>
+                    <a href="#contact">Kontakt</a>
+                </div>
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button id="mobile-menu-btn" class="icon-btn mobile-menu-btn" aria-label="Menü öffnen">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero section-animate">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <div class="badge fade-in-up" style="animation-delay: 0.1s;">Sägewerk & Holzbau</div>
+            <h1 class="hero-title fade-in-up" style="animation-delay: 0.3s;">
+                Verwurzelt in Qualität.<br>
+                <span class="highlight-serif">Gegründet in <span class="text-glow">1898.</span></span>
+            </h1>
+            <p class="hero-subtitle fade-in-up" style="animation-delay: 0.5s;">Ihr kompetenter Partner in Sachen Holz
+                und Holzbau seit über einem Jahrhundert. Präzision, die bleibt.</p>
+            <div class="cta-group fade-in-up" style="animation-delay: 0.7s;">
+                <a href="#services" class="btn btn-primary">Unsere Leistungen entdecken</a>
+                <a href="#contact" class="btn btn-secondary">Kontakt aufnehmen</a>
+            </div>
+        </div>
+        <div class="scroll-indicator fade-in-up" style="animation-delay: 1.2s;">
+            <span>Scrollen</span>
+            <div class="line"></div>
+        </div>
+    </header>
+
+    <section id="services" class="services section-animate fade-in-up">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Was wir bieten</h2>
+                <p class="section-desc">Handwerkliche Präzision trifft auf modernste Technik in unserem
+                    traditionsreichen Haus.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal-card" style="transition-delay: 0.1s;">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <circle cx="12" cy="12" r="6" />
+                            <circle cx="12" cy="12" r="2" />
+                        </svg>
+                    </div>
+                    <h3>Säge- & Hobelwerk</h3>
+                    <p>Feinstes Rundholz aus heimischen Wäldern wird in unserem Sägewerk mit höchster Präzision nach
+                        Ihren Schnittvorgaben verarbeitet. Ob maßgenaues Bauholz für anspruchsvolle Konstruktionen oder
+                        fein gehobelte Schnittware – wir garantieren Ihnen erstklassige Holzqualität.</p>
+                </div>
+                <div class="service-card reveal-card" style="transition-delay: 0.2s;">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="m14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                        </svg>
+                    </div>
+                    <h3>Bautischlerei</h3>
+                    <p>Wir verwirklichen Ihre Visionen aus Holz von der Planung bis zur finalen Montage. Unser
+                        Leistungsspektrum umfasst moderne Carports, Balkone, Terrassen sowie Sonderkonstruktionen. Mit
+                        echter Handwerkskunst schaffen wir Bauten, die durch höchste Langlebigkeit überzeugen.</p>
+                </div>
+                <div class="service-card reveal-card" style="transition-delay: 0.3s;">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z" />
+                        </svg>
+                    </div>
+                    <h3>Farbenhandel</h3>
+                    <p>In unserem Fachgeschäft bieten wir Ihnen eine handverlesene Auswahl an Lasuren, natürlichen Ölen
+                        und hochwertigen Anstrichen für langanhaltenden Oberflächenschutz. Wir beraten Sie kompetent, um
+                        die Struktur Ihres Holzes langfristig vor jeglicher Witterung zu schützen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="chronik" class="chronik section-animate fade-in-up">
+        <div class="container chronik-grid">
+            <div class="chronik-content">
+                <div class="badge">Unsere Chronik</div>
+                <h2 class="section-title">Tradition <span class="highlight-serif">seit 1898</span></h2>
+                <div class="chronik-text">
+                    <p>Seit 1898 gibt es den Familienbetrieb Stadler.</p>
+                    <p>Als Mühle und Landwirtschaft wurde begonnen und stetig wurde unser Betrieb erweitert und
+                        vergrößert. Immer in Besitz der Familie Stadler.</p>
+                    <p>In der 3. Generation ist der Familienbetrieb seit 1999 in Besitz von Hansbert Stadler.</p>
+                    <p>Im Jahr 2000 wurde unter seiner Führung die Tischlerei erneuert und erweitert.</p>
+                    <p>5 langjährige und erfahrene Mitarbeiter stehen Ihnen heute als kompetentes Team für Ihre Fragen
+                        und Anliegen zur Verfügung.</p>
+                    <p class="chronik-highlight mt-4 cl-accent"><strong>Tradition seit 1898 ist das beste Argument für
+                            eine Zusammenarbeit!</strong></p>
+                </div>
+            </div>
+            <div class="chronik-image">
+                <div class="history-card">
+                    <img src="assets/logo-stadler-29309f65.png" alt="Stadler Logo History" class="history-logo">
+                    <h3>125+ Jahre</h3>
+                    <p>Erfahrung im Umgang mit Holz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery section-animate fade-in-up">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Unsere Projekte</h2>
+                <p class="section-desc">Eine kuratierte Auswahl unserer handwerklichen Arbeiten aus Holz.</p>
+            </div>
+
+
+
+            <div class="gallery-nav text-center mb-4">
+                <button class="filter-btn active" data-filter="all">Alle</button>
+                <button class="filter-btn" data-filter="balkon">Balkone</button>
+                <button class="filter-btn" data-filter="carport">Carports</button>
+                <button class="filter-btn" data-filter="garten">Hütten</button>
+                <button class="filter-btn" data-filter="holz">Spezial</button>
+                <button class="filter-btn" data-filter="terrassen">Terrassen</button>
+                <button class="filter-btn" data-filter="ueberdachung">Dächer</button>
+                <button class="filter-btn" data-filter="zaun">Zäune</button>
+            </div>
+            <div class="real-gallery-grid">
+                <!-- JS injected gallery items -->
+            </div>
+
+            <div class="text-center mt-4">
+                <button id="load-more-gallery" class="btn btn-secondary" style="display: none;">Alle Projekte
+                    anzeigen</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner section-animate fade-in-up">
+        <div class="banner-content">
+            <h2 class="serif-banner">Wir machen Ihre Visionen aus Holz wahr.</h2>
+            <p>Vom ersten Schnitt im Sägewerk bis zum finalen Pinselstrich.</p>
+            <a href="#contact" class="btn btn-primary mt-4">Projekt starten</a>
+        </div>
+    </section>
+
+    <section id="pathfinder" class="map-section section-animate fade-in-up">
+        <a href="#pathfinder"></a>
+        <div class="container">
+            <div class="location-card">
+                <div class="location-info">
+                    <h2>So finden Sie zu unserer Handwerkskunst</h2>
+                    <p class="muted-text">Besuchen Sie unser Sägewerk und Bautischlerei. Wir freuen uns darauf, Ihre
+                        Holz-Visionen gemeinsam mit Ihnen zu besprechen.</p>
+                </div>
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://maps.google.com/maps?q=Holz-Technik%20Stadler%20Steinbach%2012%20Alberndorf&t=k&z=15&ie=UTF8&iwloc=&output=embed"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        title="Google Maps Standort Holz-Technik Stadler"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="logo">
+                    <img src="assets/logo-stadler-29309f65.png" alt="Holz-Technik Stadler" class="nav-logo">
+                    <span class="logo-text">Holz-Technik<br><b class="logo-bold">Stadler</b></span>
+                </div>
+                <p class="footer-desc mt-4">Wir öffnen unsere Türen für Ihre Ideen. Seit 1898 Ihr verlässlicher Partner
+                    für hochwertige Holzarbeiten.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Kontakt</h3>
+                <ul class="contact-list">
+                    <li>Hansbert Stadler</li>
+                    <li>Steinbach 12</li>
+                    <li>4211 Alberndorf idR</li>
+                    <li class="mt-2"><a href="tel:072357014" class="link-hover">Tel. 07235 7014</a></li>
+                    <li>Fax. 07235 7014 4</li>
+                    <li><a href="mailto:stadler@holz-technik.at" class="link-hover">stadler@holz-technik.at</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Öffnungszeiten</h3>
+                <p class="text-sm muted-text mb-2">(November bis März)</p>
+                <div class="hours-box">
+                    <div class="hours-row">
+                        <span>Mo - Fr</span>
+                        <span>08:00 - 12:00</span>
+                    </div>
+                    <div class="hours-row">
+                        <span></span>
+                        <span>13:00 - 17:00</span>
+                    </div>
+                    <div class="hours-row mt-2 cl-accent">
+                        <span>Sa, So, Feiertag</span>
+                        <span>Geschlossen</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container flex-between">
+                <p>&copy; 2026 Holz-Technik Stadler. Alle Rechte vorbehalten.</p>
+                <div class="legal-links">
+                    <a href="datenschutz.html">Datenschutz</a>
+                    <a href="impressum.html">Impressum</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="gallery-modal" class="gallery-modal">
+        <span class="modal-close">&times;</span>
+        <button class="modal-prev" aria-label="Zurück">&#10094;</button>
+        <img class="modal-img" id="modal-img" src="" alt="Projekt vergrößert">
+        <button class="modal-next" aria-label="Weiter">&#10095;</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
