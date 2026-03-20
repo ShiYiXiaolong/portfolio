@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de" class="theme-dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stadler - Admin Panel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="blob-bg"></div>
+
+    <div class="container">
+        <div class="admin-container" id="login-section">
+            <h2 class="section-title text-center">Admin Login</h2>
+            <p class="text-center muted-text mb-4">Bitte melden Sie sich an, um Neuigkeiten zu bearbeiten.</p>
+            
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">E-Mail</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Passwort</label>
+                    <input type="password" id="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Anmelden</button>
+                <div id="auth-error">Login fehlgeschlagen. Bitte überprüfen Sie Ihre Daten.</div>
+            </form>
+            
+            <div class="text-center mt-4">
+                <a href="../index.html" class="link-hover muted-text">Zurück zur Startseite</a>
+            </div>
+        </div>
+
+        <div class="admin-container hidden" id="dashboard-section">
+            <div class="admin-header">
+                <h2 class="section-title mb-0">Neuigkeiten verwalten</h2>
+                <div>
+                    <a href="../index.html" class="btn btn-secondary btn-small">Zur Startseite</a>
+                    <button id="logout-btn" class="btn btn-secondary btn-small" style="margin-left: 0.5rem;">Abmelden</button>
+                </div>
+            </div>
+
+            <div class="news-form-container">
+                <h3 id="form-title">Neue Nachricht erstellen</h3>
+                <form id="news-form">
+                    <input type="hidden" id="news-id">
+                    <div class="form-group">
+                        <label for="news-title">Titel</label>
+                        <input type="text" id="news-title" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="news-date">Datum</label>
+                        <input type="date" id="news-date" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="news-importance">Wichtigkeit</label>
+                        <select id="news-importance" class="form-control" required>
+                            <option value="normal">Normal</option>
+                            <option value="high">Hochgestellt (Wichtig)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="news-text">Inhalt</label>
+                        <textarea id="news-text" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submit-btn">Speichern</button>
+                    <button type="button" class="btn btn-secondary hidden" id="cancel-edit-btn" style="margin-left: 1rem;">Abbrechen</button>
+                </form>
+            </div>
+
+            <div class="news-list" id="news-list">
+                <h3>Bestehende Nachrichten</h3>
+                <div id="news-list-container" class="mt-4">
+                    <!-- News items injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

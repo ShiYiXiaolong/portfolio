@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Theme Toggle Logic ---
     const themeBtn = document.getElementById('theme-toggle');
     const htmlElement = document.documentElement;
 
-    // Check saved theme or system preference
     const savedTheme = localStorage.getItem('theme');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -39,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Mobile Menu Logic ---
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const navLinksContainer = document.querySelector('.nav-links');
 
@@ -56,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Intersection Observer for Animations ---
     const animatedElements = document.querySelectorAll('.fade-in-up, .reveal-card');
     const observerOptions = {
         root: null,
@@ -275,5 +271,178 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'ArrowLeft') showPrev();
         }
     });
+
+    // --- Supabase News Fetching ---
+    const supabaseUrl = 'https://yillyhywlhmgtqqbinvr.supabase.co';
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlpbGx5aHl3bGhtZ3RxcWJpbnZyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwMTc0NzgsImV4cCI6MjA4OTU5MzQ3OH0.qZ_47HRMiECxB3GuLATizIrx_GpZhKneKg7ieV8-Jk0';
+    
+    // Check if supabase is loaded
+    if (window.supabase) {
+        const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+        const newsListContainer = document.getElementById('public-news-list');
+        const emptyMsg = document.getElementById('public-news-empty');
+
+        if (newsListContainer) {
+            fetchNews();
+        }
+
+        async function fetchNews() {
+            const { data, error } = await supabase.from('news').select('*').order('date', { ascending: false });
+            
+            if (error) {
+                console.error('Error fetching news:', error);
+                return;
+            }
+
+            if (data.length === 0) {
+                if (emptyMsg) emptyMsg.style.display = 'block';
+                return;
+            }
+
+            data.forEach((item, index) => {
+                const dateObj = new Date(item.date);
+                const dateStr = dateObj.toLocaleDateString('de-DE');
+                
+                const isHigh = item.importance === 'high';
+                const div = document.createElement('div');
+                div.className = `service-card reveal-card ${isHigh ? 'news-high-importance' : ''}`;
+                div.style.transitionDelay = `${(index % 3) * 0.1}s`;
+                div.style.padding = '2rem';
+                
+                div.innerHTML = `
+                    <div class="news-date cl-accent text-sm mb-2" style="font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;">
+                        ${dateStr} ${isHigh ? '<span class="badge-high">Wichtig</span>' : ''}
+                    </div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">${escapeHtml(item.title)}</h3>
+                    <p style="margin-top: 0.5rem; white-space: pre-wrap; color: var(--text-muted);">${escapeHtml(item.textfeed)}</p>
+                `;
+                
+                newsListContainer.appendChild(div);
+                
+                // Observe the new element for animation
+                if (typeof observer !== 'undefined') {
+                    observer.observe(div);
+                }
+            });
+        }
+        
+        function escapeHtml(unsafe) {
+            return (unsafe || "").toString()
+                 .replace(/&/g, "&amp;")
+                 .replace(/</g, "&lt;")
+                 .replace(/>/g, "&gt;")
+                 .replace(/"/g, "&quot;")
+                 .replace(/'/g, "&#039;");
+        }
+    }
+
+    // --- Contact Modal Logic ---
+    fetch('email_modal.html')
+        .then(response => response.text())
+        .then(html => {
+            document.body.insertAdjacentHTML('beforeend', html);
+            initContactModal();
+        })
+        .catch(err => console.error('Error loading contact modal:', err));
+
+    function initContactModal() {
+        const contactModal = document.getElementById('contact-modal');
+        const contactClose = document.getElementById('contact-modal-close');
+        const contactForm = document.getElementById('contact-form');
+        const contactOutput = document.getElementById('contact-output');
+        const triggers = document.querySelectorAll('.contact-modal-trigger');
+
+        if (!contactModal || !contactForm) return;
+
+        triggers.forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                contactModal.classList.add('active');
+            });
+        });
+
+        contactClose.addEventListener('click', () => {
+            contactModal.classList.remove('active');
+        });
+
+        contactModal.addEventListener('click', (e) => {
+            if (e.target === contactModal) {
+                contactModal.classList.remove('active');
+            }
+        });
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('contact-name').value;
+            const email = document.getElementById('contact-email').value;
+            const phone = document.getElementById('contact-phone').value;
+            const subject = document.getElementById('contact-subject').value;
+            const message = document.getElementById('contact-message').value;
+
+            if (!email && !phone) {
+                contactOutput.style.display = 'block';
+                contactOutput.style.backgroundColor = '#fef2f2';
+                contactOutput.style.color = '#dc2626';
+                contactOutput.style.border = '1px solid #f87171';
+                contactOutput.textContent = 'Bitte E-Mail oder Telefonnummer angeben.';
+                return;
+            }
+
+            const submitBtn = document.getElementById('contact-submit-btn');
+            const submitBtnText = submitBtn.querySelector('span');
+            const originalText = submitBtnText.textContent;
+            submitBtnText.textContent = 'Wird gesendet...';
+            submitBtn.disabled = true;
+
+            try {
+                const supabaseClient = window.supabase ? window.supabase.createClient(supabaseUrl, supabaseKey) : null;
+                if (!supabaseClient) throw new Error('Supabase client not initialized.');
+
+                const { data, error } = await supabaseClient.rpc('submit_contact_form', {
+                    p_name: name,
+                    p_email: email,
+                    p_phone: phone,
+                    p_subject: subject,
+                    p_message: message
+                });
+
+                if (error) throw error;
+
+                // After saving to the Database, physically send the email via Edge Function
+                const funcRes = await supabaseClient.functions.invoke('send-email', {
+                    body: { name, email, phone, subject, message }
+                });
+
+                if (funcRes.error) {
+                    console.error('Edge Function Error:', funcRes.error);
+                    // We won't block the UI success state here since it saved to the DB successfully, 
+                    // but normally you might alert the user if critical.
+                }
+
+                contactOutput.style.display = 'block';
+                contactOutput.style.backgroundColor = '#f0fdf4';
+                contactOutput.style.color = '#166534';
+                contactOutput.style.border = '1px solid #86efac';
+                contactOutput.textContent = 'Nachricht erfolgreich gesendet. Wir melden uns in Kürze!';
+                contactForm.reset();
+
+                setTimeout(() => {
+                    contactModal.classList.remove('active');
+                    contactOutput.style.display = 'none';
+                }, 3000);
+            } catch (err) {
+                console.error(err);
+                contactOutput.style.display = 'block';
+                contactOutput.style.backgroundColor = '#fef2f2';
+                contactOutput.style.color = '#dc2626';
+                contactOutput.style.border = '1px solid #f87171';
+                contactOutput.textContent = 'Fehler beim Senden der Nachricht. Bitte versuchen Sie es später erneut.';
+            } finally {
+                submitBtnText.textContent = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+    }
 
 });
