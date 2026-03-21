@@ -278,7 +278,6 @@ h4 {
 }
 
 .theme-dark .nav-logo {
-    /* If the logo is dark text on transparent, we might need a background or invert */
     background: rgba(255, 255, 255, 0.9);
     padding: 0.3rem;
     border-radius: var(--radius-sm);
