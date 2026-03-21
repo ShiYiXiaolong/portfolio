@@ -2,8 +2,8 @@ const supabaseUrl = 'https://yillyhywlhmgtqqbinvr.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlpbGx5aHl3bGhtZ3RxcWJpbnZyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwMTc0NzgsImV4cCI6MjA4OTU5MzQ3OH0.qZ_47HRMiECxB3GuLATizIrx_GpZhKneKg7ieV8-Jk0';
 let supabaseClient;
 
-// Session Persistence Toggle: 'ON' = Stay logged in even after browser close, 'OFF' = Sign out on browser close
-const PERSIST_SESSION = 'ON'; 
+// session toggle: on last forever, off -> close browser to log out
+const PERSIST_SESSION = 'ON';
 
 document.addEventListener('DOMContentLoaded', () => {
     const loginSection = document.getElementById('login-section');
@@ -20,11 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const dateInput = document.getElementById('news-date');
     const importanceInput = document.getElementById('news-importance');
 
-    // Set today's date as default
     const today = new Date().toISOString().split('T')[0];
     dateInput.value = today;
 
-    // Initialize Supabase Client securely
     if (window.supabase) {
         supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey, {
             auth: {
@@ -37,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    // Check session on load
     checkSession();
 
     supabaseClient.auth.onAuthStateChange((event, session) => {
@@ -79,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
         console.log("Login data:", data)
         console.error("Login error:", error)
-        
+
         if (error) {
             authError.style.display = 'block';
             authError.textContent = error.message;
@@ -93,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
         await supabaseClient.auth.signOut();
     });
 
-    // Load News
     async function loadNews() {
         const { data, error } = await supabaseClient.from('news').select('*').order('date', { ascending: false });
 
@@ -114,9 +110,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const div = document.createElement('div');
             div.className = 'news-item';
-            
+
             const badge = item.importance === 'high' ? '<span style="background:var(--primary);color:#fff;padding:2px 8px;border-radius:12px;font-size:0.75rem;margin-left:8px;vertical-align:middle;">Wichtig</span>' : '';
-            
+
             div.innerHTML = `
                 <div class="news-item-content">
                     <span class="news-item-date">${dateStr}${badge}</span>
@@ -131,7 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
             newsListContainer.appendChild(div);
         });
 
-        // Attach event listeners for edit and delete
         document.querySelectorAll('.edit-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const id = e.target.getAttribute('data-id');
@@ -150,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Submit News
+    // supabase calls
     newsForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
