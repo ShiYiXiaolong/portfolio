@@ -2,6 +2,9 @@ const supabaseUrl = 'https://yillyhywlhmgtqqbinvr.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlpbGx5aHl3bGhtZ3RxcWJpbnZyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwMTc0NzgsImV4cCI6MjA4OTU5MzQ3OH0.qZ_47HRMiECxB3GuLATizIrx_GpZhKneKg7ieV8-Jk0';
 let supabaseClient;
 
+// Session Persistence Toggle: 'ON' = Stay logged in even after browser close, 'OFF' = Sign out on browser close
+const PERSIST_SESSION = 'ON'; 
+
 document.addEventListener('DOMContentLoaded', () => {
     const loginSection = document.getElementById('login-section');
     const dashboardSection = document.getElementById('dashboard-section');
@@ -23,7 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize Supabase Client securely
     if (window.supabase) {
-        supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
+        supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey, {
+            auth: {
+                persistSession: true,
+                storage: PERSIST_SESSION === 'ON' ? window.localStorage : window.sessionStorage
+            }
+        });
     } else {
         console.error("Supabase CDN not loaded.");
         return;
