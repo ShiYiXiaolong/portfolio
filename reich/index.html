@@ -4,24 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Daniela Reich | Fachärztin für Allgemeinmedizin & Familienmedizin</title>
-    <meta name="description"
-        content="Ordination Dr. Daniela Reich in Altenberg. Ihre Hausärztin für umfassende medizinische Versorgung, Vorsorge und persönliche Betreuung. Modern, kompetent, menschlich.">
-    <meta name="keywords"
-        content="Allgemeinmedizin, Hausarzt, Altenberg, Dr. Daniela Reich, Familienmedizin, Vorsorgeuntersuchung, Patientenzentriert">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Dr. Daniela Reich | Fachärztin für Allgemeinmedizin">
-    <meta property="og:description" content="Persönliche Betreuung und moderne Medizin im Herzen von Altenberg.">
-    <!-- Image placeholder -->
-    <meta property="og:image" content="https://liunero.com/reich/assets/og-image.jpg">
-
-    <!-- Fonts -->
+    <title>Dr. Daniela Reich | Privat- & Kassenärztin Altenberg</title>
+    <meta name="description" content="Ordination Dr. Daniela Reich in Altenberg. Hausärztliche Versorgung, Vorsorge und persönliche Betreuung. Modern, kompetent, menschlich.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="index.css">
 </head>
 
@@ -31,178 +18,171 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="logo">
-                <div class="logo-mark">
-                    <span class="logo-initials">DR</span>
-                </div>
+                <div class="logo-mark"><span class="logo-initials">DR</span></div>
                 <div class="logo-copy">
                     <span class="logo-title">Dr. Daniela <b class="logo-bold">Reich</b></span>
-                    <span class="logo-subtitle">Allgemeinmedizin</span>
+                    <span class="logo-subtitle" data-i18n="hero.badge">Allgemeinmedizin</span>
                 </div>
             </div>
             
             <div class="nav-right">
                 <div class="nav-links">
-                    <a href="#home">Home</a>
-                    <a href="#news">Aktuelles</a>
-                    <a href="#services">Leistungen</a>
-                    <a href="#appointment">Termine</a>
-                    <a href="#team">Team</a>
-                    <a href="#contact">Kontakt</a>
+                    <a href="#home" data-i18n="nav.home">Home</a>
+                    <a href="#news" data-i18n="nav.news">Aktuelles</a>
+                    <a href="#services" data-i18n="nav.services">Leistungen</a>
+                    <a href="#team" data-i18n="nav.team">Team</a>
+                    <a href="#appointment" data-i18n="nav.appointment">Termine</a>
+                    <a href="#contact" data-i18n="nav.contact">Kontakt</a>
                 </div>
-                
-                <button id="theme-toggle" class="icon-btn" aria-label="Farbschema wechseln">
-                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-                </button>
-                
-                <button id="mobile-menu-btn" class="icon-btn mobile-only" aria-label="Menü öffnen">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-                </button>
+                <div class="nav-actions">
+                    <button id="lang-toggle" class="lang-btn" aria-label="Language">
+                        <span class="active">DE</span><span class="sep">|</span><span>EN</span>
+                    </button>
+                    <button id="theme-toggle" class="icon-btn" aria-label="Theme">
+                        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    </button>
+                    <button id="mobile-menu-btn" class="icon-btn mobile-only" aria-label="Menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
 
     <header id="home" class="hero section-animate">
         <div class="hero-image-wrapper">
-            <img src="assets/hero.png" alt="Ordination Dr. Reich" class="hero-image">
+            <img src="assets/hero.png" alt="Ordination" class="hero-image">
         </div>
         <div class="hero-content">
-            <div class="badge fade-in-up" style="animation-delay: 0.1s;">Hausärztliche Versorgung</div>
-            <h1 class="hero-title fade-in-up" style="animation-delay: 0.3s;">
-                Menschlichkeit & <br>
-                <span class="highlight-serif">medizinische <span class="text-glow">Exzellenz.</span></span>
-            </h1>
-            <p class="hero-subtitle fade-in-up" style="animation-delay: 0.5s;">
-                Herzlich Willkommen in Ihrer Ordination im Haus der Gesundheit in Altenberg. 
-                Sie als Mensch stehen im Mittelpunkt unserer Tätigkeit.
-            </p>
-            <div class="cta-group fade-in-up" style="animation-delay: 0.7s;">
-                <a href="#appointment" class="btn btn-primary">Termin vereinbaren</a>
-                <a href="#services" class="btn btn-secondary">Leistungen ansehen</a>
+            <div class="badge fade-in-up" data-i18n="hero.badge">Hausärztliche Versorgung</div>
+            <h1 class="hero-title fade-in-up" data-i18n="hero.title">Ihre Gesundheit in<br><span class="accent">besten Händen</span></h1>
+            <p class="hero-subtitle fade-in-up" data-i18n="hero.subtitle">Dr. Daniela Reich & Team — Ihre Hausarztpraxis in Altenberg. Wir vereinen moderne Medizin mit menschlicher Fürsorge.</p>
+            <div class="hero-actions fade-in-up">
+                <a href="#appointment" class="btn btn-primary" data-i18n="hero.cta.appointment">Termin vereinbaren</a>
+                <a href="#services" class="btn btn-secondary" data-i18n="hero.cta.services">Unsere Leistungen</a>
             </div>
         </div>
-        <div class="scroll-indicator fade-in-up" style="animation-delay: 1.2s;">
-            <span>Entdecken</span>
+        <div class="scroll-indicator fade-in-up">
             <div class="line"></div>
         </div>
     </header>
 
-    <section id="news" class="section section-news section-animate fade-in-up">
+    <section id="news" class="section bg-surface">
         <div class="container">
-            <div class="section-header text-center">
-                <div class="badge">Aktuelles</div>
-                <h2 class="section-title">Neuigkeiten & Termine</h2>
-                <p class="section-desc">Bleiben Sie informiert über Urlaubszeiten, Impfaktionen und wichtige Hinweise.</p>
+            <div class="section-header text-center section-animate">
+                <h2 class="section-title" data-i18n="news.title">Aktuelles</h2>
+                <p class="section-desc" data-i18n="news.desc">Bleiben Sie informiert über Neuigkeiten aus unserer Ordination.</p>
             </div>
-            
-            <div class="news-grid" id="news-container">
-                <!-- News items from JSON -->
-            </div>
+            <div class="news-grid" id="news-container"></div>
         </div>
     </section>
 
-    <section id="services" class="section section-services section-animate fade-in-up">
+    <section id="services" class="section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Ordinationsleistungen</h2>
-                <p class="section-desc">Umfassende allgemeinmedizinische Diagnostik und Therapie auf Basis modernster Erkenntnisse.</p>
+            <div class="section-header text-center section-animate">
+                <h2 class="section-title" data-i18n="services.title">Leistungen</h2>
+                <p class="section-desc" data-i18n="services.desc">Umfassende Betreuung für Ihre gesamte Familie.</p>
             </div>
-            
-            <div class="services-grid" id="services-grid">
-                <!-- Services cards from JSON -->
-            </div>
-            
-            <div class="services-list-wrapper mt-4">
-                <ul class="services-list" id="services-list">
-                    <!-- Additional services from JSON -->
-                </ul>
-            </div>
+            <div class="services-grid" id="services-grid"></div>
         </div>
     </section>
 
-    <section id="appointment" class="section section-appointment section-animate fade-in-up">
+    <section id="team" class="section bg-surface">
+        <div class="container">
+            <div class="section-header text-center section-animate">
+                <h2 class="section-title" data-i18n="team.title">Unser Team</h2>
+                <p class="section-desc" data-i18n="team.desc">Kompetenz und Herz für Ihre Gesundheit.</p>
+            </div>
+            <div class="team-grid" id="team-grid"></div>
+        </div>
+    </section>
+
+    <section id="appointment" class="section">
         <div class="container grid-2">
             <div class="appointment-content">
-                <div class="badge">Erreichbarkeit</div>
-                <h2 class="section-title">Terminvereinbarung</h2>
-                <p class="appointment-intro">Wir sind eine Terminordination. Bitte vereinbaren Sie Ihren Termin telefonisch, um Wartezeiten zu minimieren.</p>
+                <div class="badge" data-i18n="appointment.badge">Ihr Termin</div>
+                <h2 class="section-title" data-i18n="appointment.title">Terminordination</h2>
+                <p class="section-desc mb-4" data-i18n="appointment.desc">Bitte vereinbaren Sie Ihren Termin telefonisch.</p>
                 
-                <div class="contact-box mt-4">
-                    <div class="contact-item">
-                        <span class="contact-label">Telefon:</span>
-                        <a href="tel:+4372308008" class="contact-value">+43 7230 / 80 08</a>
+                <div class="practice-details">
+                    <div class="detail-item">
+                        <strong data-i18n="info.location.title">Standort</strong>
+                        <p data-i18n="info.location.text">Erster Stock, barrierefrei mittels Lift erreichbar.</p>
                     </div>
-                    <div class="contact-item">
-                        <span class="contact-label">Standort:</span>
-                        <span class="contact-value">Reichenauer Straße 4, 4203 Altenberg</span>
+                    <div class="detail-item">
+                        <strong data-i18n="info.parking.title">Parken</strong>
+                        <p data-i18n="info.parking.text">Kurzparkplätze befinden sich rund um die Ordination.</p>
+                    </div>
+                    <div class="detail-item">
+                        <strong data-i18n="info.mask.title">Infektschutz</strong>
+                        <p data-i18n="info.mask.text">Bitte bei Infekten eine Maske tragen.</p>
                     </div>
                 </div>
-                
-                <div class="notice-card mt-4" style="padding: 2rem; background: var(--bg-surface-hover); border-radius: var(--radius-md); border: 1px dashed var(--border-strong);">
-                    <p style="font-size: 0.95rem;"><strong>Hausärztlicher Notdienst (141):</strong> In dringenden Fällen außerhalb unserer Öffnungszeiten.</p>
+
+                <div class="contact-box mt-4">
+                    <div class="contact-item">
+                        <span class="contact-label">Telefon</span>
+                        <a href="tel:+4372308008" class="contact-value">+43 7230 / 80 08</a>
+                    </div>
                 </div>
             </div>
             <div class="appointment-hours">
                 <div class="hours-card">
-                    <h3>Ordinationszeiten</h3>
+                    <h3 data-i18n="appointment.title">Ordinationszeiten</h3>
                     <div class="hours-grid">
                         <div class="hours-row"><span>Montag</span><span>08:00 – 12:00</span></div>
                         <div class="hours-row"><span>Dienstag</span><span>15:00 – 18:00</span></div>
                         <div class="hours-row"><span>Mittwoch</span><span>07:00 – 12:00</span></div>
                         <div class="hours-row"><span>Donnerstag</span><span>08:00 – 12:00</span></div>
-                        <div class="hours-row)<span>Freitag</span><span>08:00 – 12:00</span></div>
+                        <div class="hours-row"><span>Freitag</span><span>08:00 – 12:00</span></div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="team" class="section section-team section-animate fade-in-up">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2 class="section-title">Unser Team</h2>
-                <p class="section-desc">Kompetenz und Herzlichkeit für Ihre Gesundheit.</p>
-            </div>
-            <div class="team-grid">
-                <div class="service-card reveal-card" style="padding: 4rem 2rem;">
-                   <div style="width: 140px; height: 140px; margin: 0 auto 2rem; border-radius: 50%; overflow: hidden; box-shadow: var(--shadow-md);">
-                       <img src="assets/team_doctor.png" alt="Dr. Daniela Reich" style="width: 100%; height: 100%; object-fit: cover;">
-                   </div>
-                   <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Dr. Daniela Reich</h3>
-                   <p style="color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem;">Fachärztin für Allgemeinmedizin</p>
+                    <div class="notice-card mt-4 p-3" style="background: rgba(255,255,255,0.05); border-radius: 8px; font-size: 0.85rem; border: 1px solid var(--border-color);">
+                        <strong data-i18n="info.admission.title">Neuaufnahmen</strong>
+                        <p data-i18n="info.admission.text" class="mb-2">Derzeit nur für Patienten aus dem Gemeindegebiet.</p>
+                        <p><strong>Notdienst (141):</strong> In dringenden Fällen außerhalb der Öffnungszeiten.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <footer id="contact" class="footer">
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <div class="logo">
-                    <span class="logo-bold" style="font-size: 2rem;">Reich</span>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <span class="logo-title">Dr. Daniela <b class="logo-bold">Reich</b></span>
+                    </div>
+                    <p class="footer-tagline" data-i18n="footer.tagline" style="margin-top: 1rem;">Ihre Hausarztpraxis in Altenberg.</p>
+                    <div class="contact-box mt-4">
+                        <div class="contact-item">
+                            <span class="contact-label">Telefon</span>
+                            <a href="tel:+4372308008" class="contact-value">+43 7230 / 80 08</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Adresse</span>
+                            <span class="contact-value">Reichenauer Straße 4, 4203 Altenberg</span>
+                        </div>
+                    </div>
                 </div>
-                <p class="footer-desc" style="margin-top: 2rem;">Ihre Partnerin für Gesundheit in Altenberg. Kompetente medizinische Versorgung mit Herz und Verstand.</p>
+                <div class="footer-col">
+                    <h4 style="margin-bottom: 1.5rem;">Quick Links</h4>
+                    <ul class="footer-links" style="list-style: none;">
+                        <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                        <li><a href="#news" data-i18n="nav.news">Aktuelles</a></li>
+                        <li><a href="#services" data-i18n="nav.services">Leistungen</a></li>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-col">
-                <h3 style="font-family: var(--font-serif); font-style: italic;">Verschreibungen</h3>
-                <p style="font-size: 0.95rem; color: var(--text-muted);">Dauermedikamente können bequem telefonisch über unseren Anrufbeantworter oder per Kuverteinwurf bestellt werden.</p>
-            </div>
-            <div class="footer-col">
-                <h3 style="font-family: var(--font-serif); font-style: italic;">Links</h3>
-                <ul class="footer-links">
-                    <li><a href="impressum.html">Impressum</a></li>
-                    <li><a href="datenschutz.html">Datenschutz</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2026 Dr. Daniela Reich. Alle Rechte vorbehalten.</p>
+            <div class="footer-bottom">
+                <p><span data-i18n="footer.copyright">&copy; 2026 Dr. Daniela Reich.</span> <a href="#home" style="margin-left: 1rem;" data-i18n="footer.back">Nach oben</a></p>
             </div>
         </div>
     </footer>
 
     <script src="index.js"></script>
 </body>
-
 </html>
