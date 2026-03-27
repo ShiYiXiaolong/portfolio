@@ -162,7 +162,6 @@ h1, h2, h3, h4 {
 }
 
 .nav-container {
-    max-width: var(--font-sans); /* typo fixed below */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -249,9 +248,9 @@ h1, h2, h3, h4 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8rem 0 4rem;
     text-align: center;
     position: relative;
+    padding: 8rem 2.5rem;
     overflow: hidden;
 }
 
@@ -261,14 +260,15 @@ h1, h2, h3, h4 {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -2;
 }
 
 .hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.9) contrast(1.1);
+    filter: blur(10px) brightness(1.05);
+    transform: scale(1.1);
     opacity: 0.15;
 }
 
@@ -277,25 +277,81 @@ h1, h2, h3, h4 {
     filter: brightness(0.5) grayscale(1);
 }
 
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, var(--bg-base) 80%);
+    z-index: -1;
+}
+
 .hero-content {
     max-width: 900px;
-    z-index: 1;
+    z-index: 10;
+}
+
+.hero .badge {
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: var(--accent);
+    background: var(--bg-surface);
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    box-shadow: var(--shadow-sm);
+    display: inline-block;
+    margin-bottom: 2.5rem;
 }
 
 .hero-title {
-    font-size: clamp(3rem, 7vw, 5.5rem);
-    letter-spacing: -0.04em;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    line-height: 1.1;
     margin-bottom: 2rem;
+    color: var(--text-heading);
+    letter-spacing: -0.03em;
+    font-weight: 800;
+}
+
+.serif-italic {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--medical-teal);
+    font-weight: 600;
 }
 
 .hero-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     color: var(--text-muted);
-    margin-bottom: 3.5rem;
     max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    font-weight: 400;
+    margin: 0 auto 3.5rem;
+    line-height: 1.6;
+}
+
+/* Vertical indicator */
+.discover-indicator {
+    position: absolute;
+    right: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 20;
+}
+
+.discover-indicator::after {
+    content: '';
+    width: 1px;
+    height: 60px;
+    background: var(--border-strong);
+    margin-top: 1rem;
 }
 
 /* Buttons */
