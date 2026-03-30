@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /stadler/admin/
+
+Sitemap: https://liunero.com/stadler/sitemap.xml

@@ -1,0 +1,55 @@
+<div class="modal-overlay" id="contact-modal">
+    <div class="modal-content contact-modal-card">
+        <button class="modal-close-btn" id="contact-modal-close" aria-label="Schließen">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        
+        <div class="modal-header">
+            <h2 class="modal-title">Projektanfrage</h2>
+            <p class="modal-subtitle">Erzählen Sie uns von Ihrem Vorhaben. Wir melden uns umgehend bei Ihnen.</p>
+        </div>
+        
+        <form id="contact-form" class="premium-form">
+            <div class="form-row">
+                <div class="form-group floating-group">
+                    <input type="text" id="contact-name" class="premium-input" placeholder=" " required>
+                    <label for="contact-name">Ihr Name *</label>
+                </div>
+            </div>
+            
+            <div class="form-row split">
+                <div class="form-group floating-group">
+                    <input type="email" id="contact-email" class="premium-input" placeholder=" ">
+                    <label for="contact-email">E-Mail Adresse</label>
+                </div>
+                <div class="form-group floating-group">
+                    <input type="tel" id="contact-phone" class="premium-input" placeholder=" ">
+                    <label for="contact-phone">Telefonnummer</label>
+                </div>
+            </div>
+            
+            <p class="input-hint">* Bitte geben Sie mindestens eine Kontaktmöglichkeit an.</p>
+            
+            <div class="form-row">
+                <div class="form-group floating-group">
+                    <input type="text" id="contact-subject" class="premium-input" placeholder=" " required>
+                    <label for="contact-subject">Betreff / Thema *</label>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group floating-group">
+                    <textarea id="contact-message" class="premium-textarea" placeholder=" " rows="4" required></textarea>
+                    <label for="contact-message">Ihre Nachricht / Wünsche *</label>
+                </div>
+            </div>
+            
+            <div id="contact-output" class="form-feedback"></div>
+            
+            <button type="submit" class="premium-submit-btn" id="contact-submit-btn">
+                <span>Nachricht senden</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+        </form>
+    </div>
+</div>
