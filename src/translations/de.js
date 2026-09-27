@@ -107,13 +107,13 @@ const de = {
     label: "Wer ich bin",
     title: "Kein Berater. Eine Brücke.",
     p1: "Die meisten Handelsvermittler kennen nur eine Seite. Ein Makler der in Wien aufgewachsen ist versteht das österreichische Geschäftsleben — sitzt aber in Meetings mit chinesischen Partnern ohne wirklich zu verstehen was gesagt wird, oder eben nicht gesagt wird. Ein chinesischer Agent kennt die Fabriken — versteht aber nicht was ein österreichischer Geschäftsführer wirklich braucht und warum.",
-    p2: "Ich sitze auf beiden Seiten des Tisches. Meine Frau ist Chinesin, aus Chongqing — einer der größten Industriestädte Chinas. Sie ist keine Übersetzerin. Sie ist meine operative Partnerin vor Ort, mit nativem kulturellen Verständnis und einem aktiven Netzwerk das über Jahre gewachsen ist. Zwischen uns geht keine Information verloren. Weder die Sprache. Noch der Subtext.",
+    p2: "Ich sitze auf beiden Seiten des Tisches. Meine Frau ist Chinesin, aus Chongqing — einer der größten Industriestädte Chinas. Sie arbeitet mit mir als hausinterne Übersetzerin, mit nativem kulturellen Verständnis. Das Branchennetzwerk in Chongqing und den umliegenden Provinzen ist meins — über Jahre aufgebaut. Zwischen uns geht keine Information verloren. Weder die Sprache. Noch der Subtext.",
     p3: "Ich arbeite von Linz aus. Ich kenne die Entscheidungsprozesse österreichischer KMUs, wer unterschreibt, wie Due Diligence aussieht und was einen CFO überzeugt fortzufahren. Ich weiß auch, dass derselbe Ansatz der in einem Linzer Boardroom funktioniert, bei einer Fabriksverhandlung in Chongqing scheitern wird — und ich handle beides entsprechend.",
     p4: "Mein Fokus liegt im Bereich Maschinenbau und mechanische Ausrüstung, wo Österreich echte Exportstärke und China echte Nachfrage hat. Ich arbeite bewusst mit einer kleinen Anzahl von Klienten gleichzeitig. Jedes Engagement erhält meine volle Aufmerksamkeit.",
     photoCaption: "Liu Nero · Linz, Österreich",
     photoSoon: "Foto folgt",
-    partnerRole: "China-Partner · Chongqing",
-    partnerNote: "Präsenz vor Ort in China · Mandarin Muttersprache · Aktives Branchennetzwerk in Chongqing und umliegenden Provinzen",
+    partnerRole: "Hausinterne Übersetzerin · Chongqing",
+    partnerNote: "Präsenz vor Ort in China · Mandarin Muttersprache",
   },
 
   principles: {

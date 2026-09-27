@@ -107,13 +107,13 @@ const en = {
     label: "Who I am",
     title: "Not a Consultant. A Bridge.",
     p1: "Most trade intermediaries know one side. A broker who grew up in Vienna understands Austrian business — but sits in meetings with Chinese partners not fully grasping what is actually being said, or left unsaid. A Chinese agent understands the factories — but struggles to read what an Austrian managing director really needs, and why.",
-    p2: "I sit on both sides of that table. My wife is Chinese, from Chongqing — one of China's largest industrial cities. She is not a translator. She is my operational partner on the ground, with native cultural fluency and an active network that took years to build. Between us, there is no information lost in translation. Not the language. Not the subtext.",
+    p2: "I sit on both sides of that table. My wife is Chinese, from Chongqing — one of China's largest industrial cities. She works with me as an in-house translator, with native cultural fluency. The industry network in Chongqing and the surrounding provinces is mine — built over years. Between us, there is no information lost in translation. Not the language. Not the subtext.",
     p3: "I operate from Linz, Austria. I know how Austrian SMEs make decisions, who signs off, what due diligence looks like, and what makes a CFO comfortable enough to proceed. I also know that the same approach that works in a boardroom in Linz will fail in a factory negotiation in Chongqing — and I handle both accordingly.",
     p4: "My focus is the machinery and mechanical equipment sector, where Austria has genuine export strength and China has genuine demand. I work with a small number of clients at a time, by design. Every engagement gets my full attention.",
     photoCaption: "Liu Nero · Linz, Austria",
     photoSoon: "Photo coming soon",
-    partnerRole: "China Partner · Chongqing",
-    partnerNote: "On-ground presence in China · Native Mandarin · Active industry network in Chongqing and surrounding provinces",
+    partnerRole: "In-house Translator · Chongqing",
+    partnerNote: "On-ground presence in China · Native Mandarin",
   },
 
   principles: {
